@@ -1,0 +1,36 @@
+
+<table class="container">
+  <tr>
+      <td><input type="button" class="return" value="SUP" (click)="getReturn()"/></td>
+      <td colspan="3" rowspan="1"><div class="myDiv"><p id="displaynum"><bdi>{{userInput}}</bdi></p></div></td>
+  </tr>
+  <tr>
+      <td><input type="button" class="clear" value="c" #num7 (click)="getClear()"/></td>
+      <td colspan="3" rowspan="1"><div class="myDiv"><p id="displayresult"><bdi>{{result}}</bdi></p></div></td>
+  </tr>
+  <tr>
+      <td><input type="button" class="number" value="7" #num7 (click)="getInput(num7.value)"/></td>
+      <td><input type="button" class="number" value="8" #num8 (click)="getInput(num8.value)"/></td>
+      <td><input type="button" class="number" value="9" #num9 (click)="getInput(num9.value)"/></td>
+      <td><input type="button" class="button-operator" value="/" #div (click)="getInput(div.value)"/></td>
+  </tr>
+  <tr>
+      <td><input type="button" class="number" value="4" #num4 (click)="getInput(num4.value)"/></td>
+      <td><input type="button" class="number" value="5" #num5 (click)="getInput(num5.value)"/></td>
+      <td><input type="button" class="number" value="6" #num6 (click)="getInput(num6.value)"/></td>
+      <td><input type="button" class="button-operator" value="*" #mult (click)="getInput(mult.value)"/></td>
+  </tr>
+  <tr>
+      <td><input type="button" class="number" value="1" #num1 (click)="getInput(num1.value)"/></td>
+      <td><input type="button" class="number" value="2" #num2 (click)="getInput(num2.value)"/></td>
+      <td><input type="button" class="number" value="3" #num3 (click)="getInput(num3.value)"/></td>
+      <td><input type="button" class="button-operator" value="-" #min (click)="getInput(min.value)"/></td>
+  </tr>
+  <tr>
+      <td><input type="button" class="number" value="," #dot (click)="getInput(dot.value)"/></td>
+      <td><input type="button" class="number" value="0" #num0 (click)="getInput(num0.value)"/></td>
+      <td><input type="button" class="button-equal" value="=" (click)="getResult()"/></td>
+      <td><input type="button" class="button-operator" value="+" #plus (click)="getInput(plus.value)"/></td>
+  </tr>
+
+</table>

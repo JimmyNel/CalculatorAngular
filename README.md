@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This is a simple calculator with an on the fly result function :
 
-![Screenshot](src/demo.jpg)
+
 
 ## Further help
 

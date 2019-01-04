@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { CalculService } from '../calcul.service'
 
 @Component({
@@ -37,4 +37,16 @@ export class CalculatriceComponent implements OnInit {
     this.result = this.calc.calculate(this.userInput);
     //console.log(this.result);
   }
+
+  @HostListener('document:keyup', ['$event'])
+  onKeyUp(ev: KeyboardEvent){
+    console.log(ev.keyCode);
+    console.log(ev.key);
+
+    const REGEX = /^[0-9+*/\-.]$/
+    if(REGEX.exec(ev.key))
+      this.getInput(ev.key);
+    if(ev.keyCode === 8) 
+      this.getReturn();
+ }
 }

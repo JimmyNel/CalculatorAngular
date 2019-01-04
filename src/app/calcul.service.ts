@@ -7,7 +7,7 @@ export class CalculService {
 
   constructor() { }
   
-  // Méthode Calculate retour le résultat de eval(), et gère la division par 0
+  // Méthode Calculate retourne le résultat de eval(), et gère la division par 0
   calculate(userInput){
     if (userInput.includes("/0"))
       return "Err";
@@ -30,14 +30,16 @@ export class CalculService {
     return "";
   }
 
-  // methode qui gère les suites de caractères autorisées (gestion des erreurs), et retour une chaine valide qui sera envoyé en paramètre de eval()
+  // methode qui gère les suites de caractères autorisées (gestion des erreurs), et retourne une chaine valide qui sera envoyée en paramètre de eval()
   input(userInput, value){
+    //si le dernier caractère saisi est un opérateur et que l'avant dernier caractère de la chaine eval est un opérateur
     if (("/*+-").includes(value) && ("/*+-").includes(userInput.substring(userInput.length-1))){
       if (value == "-" && userInput.substring(userInput.length-1) != "-")
         return userInput += value;
       userInput = userInput.substring(0, userInput.length-1);
       return userInput += value;
     }
+    // si le premier caractère est un opérateur, alors retourne 0[operateur]
     userInput += value;
     if (("/*-+").includes(userInput.substring(0,1))){
       return userInput.replace(userInput, "0"+userInput);

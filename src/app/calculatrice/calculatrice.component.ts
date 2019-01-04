@@ -37,7 +37,7 @@ export class CalculatriceComponent implements OnInit {
     this.result = this.calc.calculate(this.userInput);
     //console.log(this.result);
   }
-
+  
   @HostListener('document:keyup', ['$event'])
   onKeyUp(ev: KeyboardEvent){
     console.log(ev.keyCode);

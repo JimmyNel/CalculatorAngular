@@ -1,0 +1,8 @@
+#wrapper {
+    text-align: center;
+    width:100%;
+    margin-top: 20%;
+  }
+#content {
+    display: inline-block;
+  }

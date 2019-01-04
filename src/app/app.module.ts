@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { CalculatriceComponent } from './calculatrice/calculatrice.component';
 import { ErrorComponent } from './error/error.component';
 
 const ROUTES:Routes =[
-  {path:'', redirectTo:'calculatrice', pathMatch:'full'},
+  {path:'', redirectTo:'home', pathMatch:'full'},
+  {path:'home', component:HomeComponent},
   {path:'calculatrice', component:CalculatriceComponent},
   {path:'**', component:ErrorComponent}
 ]
@@ -17,13 +19,14 @@ const ROUTES:Routes =[
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     CalculatriceComponent,
-    ErrorComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(ROUTES),
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]

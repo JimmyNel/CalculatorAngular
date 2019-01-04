@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
-This is a simple calculator :
+This is a simple calculator with an on the fly result function :
 
 ![Screenshot](src/demo.jpg)
 

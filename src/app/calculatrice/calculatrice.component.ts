@@ -37,11 +37,12 @@ export class CalculatriceComponent implements OnInit {
     this.result = this.calc.calculate(this.userInput);
     //console.log(this.result);
   }
-  
+
+  // Implement the keyboard input
   @HostListener('document:keyup', ['$event'])
   onKeyUp(ev: KeyboardEvent){
-    console.log(ev.keyCode);
-    console.log(ev.key);
+    //console.log(ev.keyCode);
+    //console.log(ev.key);
 
     const REGEX = /^[0-9+*/\-.]$/
     if(REGEX.exec(ev.key))
